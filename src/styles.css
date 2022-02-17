@@ -1,0 +1,79 @@
+@import url("https://rsms.me/inter/inter.css");
+
+html,
+body,
+#root {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  outline: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background: white;
+  font-family: "Inter var", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.picker-wrapper {
+  position: absolute !important;
+  top: 30px;
+  left: 30px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.picker-wrapper .picker {
+  width: 110px !important;
+  height: max-content !important;
+  background-color: rgb(242, 241, 241) !important;
+}
+
+.picker-wrapper h1 {
+  padding: 0;
+  font-size: 1.5em;
+  line-height: 0.7em;
+  color: #272730;
+  user-select: none;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  width: 3vmin;
+  height: 3vmin;
+  background: transparent;
+  border: none;
+  border-top: 1vmin solid grey;
+  border-right: 1vmin solid grey;
+  box-shadow: 0 0 0 lightgray;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.arrow.left {
+  left: 10%;
+  transform: translate3d(0, -50%, 0) rotate(-135deg);
+}
+.arrow.right {
+  right: 10%;
+  transform: translate3d(0, -50%, 0) rotate(45deg);
+}
+.arrow:hover {
+  border-color: rgb(31, 31, 30);
+  box-shadow: 0.5vmin -0.5vmin 0 grey;
+}
+.arrow:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -60%) rotate(45deg);
+  width: 200%;
+  height: 200%;
+}
